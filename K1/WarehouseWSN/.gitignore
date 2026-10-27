@@ -1,0 +1,36 @@
+# OMNeT++ build outputs
+out/
+bin/
+*.o
+*.so
+*.a
+*.dll
+*.exe
+
+# Eclipse and OMNeT++ local settings
+.settings/
+.metadata/
+.qtenvrc
+
+# Generated logs and temporary files
+*.elog
+*.tmp
+*.bak
+*~
+opp_makemake.log
+
+# Large generated simulation results
+*.vec
+*.vci
+
+# Generated animation frames
+simulations/frames/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
+~$*.pptx
