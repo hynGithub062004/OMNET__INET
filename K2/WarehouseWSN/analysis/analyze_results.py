@@ -228,7 +228,10 @@ def make_plots(output, rows, topology, curves=None):
 def main():
     project = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--k1", type=Path, default=project.parents[1] / "K1/WarehouseWSN/simulations/results")
+    baseline = project.parents[1] / "K1/WarehouseWSN/simulations/results"
+    if not baseline.is_dir():
+        baseline = project / "analysis/baseline_K1"
+    parser.add_argument("--k1", type=Path, default=baseline)
     parser.add_argument("--k2", type=Path, default=project / "simulations/results")
     parser.add_argument("--output", type=Path, default=project / "analysis/exports")
     parser.add_argument("--plots", action="store_true", help="Requires matplotlib")

@@ -1,0 +1,39 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2025 Andras Varga, OpenSim Ltd.
+Version: 6.4.0, build: 260506-2cf25223fe, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from .:  2
+Loading NED files from D:\Apps\omnet++\omnetpp-6.4.0-windows-x86_64\omnetpp-6.4.0\samples\inet-4.7.0/src:  1214
+
+Preparing for running configuration K2_Final, run #0...
+Assigned runID=K2_Final-0-20261029-14:02:18-9952
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.9e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 58.1367MiB
+** Event #173568   t=40.386158202865   Elapsed: 2.49905s (0m 02s)  40% completed  (40% total)
+     Speed:     ev/sec=69455.1   simsec/sec=16.1609   ev/simsec=4297.73
+     Messages:  created: 269200   present: 965   in FES: 93   Memory (RSS): 78.2227MiB
+** Event #274688   t=57.394373058297   Elapsed: 4.50323s (0m 04s)  57% completed  (57% total)
+     Speed:     ev/sec=50453.9   simsec/sec=8.48626   ev/simsec=5945.36
+     Messages:  created: 425542   present: 945   in FES: 93   Memory (RSS): 78.2969MiB
+** Event #350208   t=69.963662764058   Elapsed: 6.81269s (0m 06s)  69% completed  (69% total)
+     Speed:     ev/sec=32700.3   simsec/sec=5.44253   ev/simsec=6008.29
+     Messages:  created: 542215   present: 869   in FES: 61   Memory (RSS): 78.4609MiB
+** Event #455168   t=87.64642431523   Elapsed: 8.81327s (0m 08s)  87% completed  (87% total)
+     Speed:     ev/sec=52464.7   simsec/sec=8.8388   ev/simsec=5935.72
+     Messages:  created: 704481   present: 955   in FES: 92   Memory (RSS): 78.4922MiB
+** Event #522724   t=100   Elapsed: 10.0803s (0m 10s)  100% completed  (100% total)
+     Speed:     ev/sec=53317.9   simsec/sec=8.96082   ev/simsec=5950.11
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 78.6016MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522724
+
+Calling finish() at end of Run #0...
+
+End.

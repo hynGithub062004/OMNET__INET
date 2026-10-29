@@ -1,8 +1,8 @@
 version 3
-run K2_Final-4-20261029-13:46:56-6124
+run K2_Final-4-20261029-14:00:46-13664
 attr configname K2_Final
-attr datetime 20261029-13:46:56
-attr datetimef 20261029-134656
+attr datetime 20261029-14:00:46
+attr datetimef 20261029-140046
 attr experiment K2_Final
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network warehousewsn.simulations.WarehouseWSN
-attr processid 6124
+attr processid 13664
 attr repetition 4
 attr replication #4
 attr resultdir results
@@ -19,22 +19,21 @@ attr seedset 4
 config cmdenv-event-banners false
 config cmdenv-express-mode true
 config **.cmdenv-log-level warn
-config record-eventlog false
 config extends K1_Final
 config description "K2: 30 UDP sensors, corner gateway, five independent repetitions"
 config *.numSensors 30
 config output-scalar-file results/K2_Final-4.sca
 config output-vector-file results/K2_Final-4.vec
 config *.sensor[10].mobility.initialX 20m
-config *.sensor[10].mobility.initialY 5m
+config *.sensor[10].mobility.initialY 8m
 config *.sensor[11].mobility.initialX 35m
-config *.sensor[11].mobility.initialY 5m
+config *.sensor[11].mobility.initialY 8m
 config *.sensor[12].mobility.initialX 50m
-config *.sensor[12].mobility.initialY 5m
+config *.sensor[12].mobility.initialY 8m
 config *.sensor[13].mobility.initialX 65m
-config *.sensor[13].mobility.initialY 5m
+config *.sensor[13].mobility.initialY 8m
 config *.sensor[14].mobility.initialX 80m
-config *.sensor[14].mobility.initialY 5m
+config *.sensor[14].mobility.initialY 8m
 config *.sensor[15].mobility.initialX 20m
 config *.sensor[15].mobility.initialY 25m
 config *.sensor[16].mobility.initialX 35m
@@ -56,15 +55,15 @@ config *.sensor[23].mobility.initialY 35m
 config *.sensor[24].mobility.initialX 80m
 config *.sensor[24].mobility.initialY 35m
 config *.sensor[25].mobility.initialX 20m
-config *.sensor[25].mobility.initialY 55m
+config *.sensor[25].mobility.initialY 52m
 config *.sensor[26].mobility.initialX 35m
-config *.sensor[26].mobility.initialY 55m
+config *.sensor[26].mobility.initialY 52m
 config *.sensor[27].mobility.initialX 50m
-config *.sensor[27].mobility.initialY 55m
+config *.sensor[27].mobility.initialY 52m
 config *.sensor[28].mobility.initialX 65m
-config *.sensor[28].mobility.initialY 55m
+config *.sensor[28].mobility.initialY 52m
 config *.sensor[29].mobility.initialX 80m
-config *.sensor[29].mobility.initialY 55m
+config *.sensor[29].mobility.initialY 52m
 config extends K1_AllSensorsEnergy
 config description "Final K1 experiment with five independent repetitions"
 config sim-time-limit 100s
@@ -1110,7 +1109,7 @@ par WarehouseWSN.sensor[0].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[0].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[0].energyStorage residualEnergyCapacity:last 99.8272004776569
+scalar WarehouseWSN.sensor[0].energyStorage residualEnergyCapacity:last 99.82720047765659
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -2256,7 +2255,7 @@ par WarehouseWSN.sensor[1].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[1].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[1].energyStorage residualEnergyCapacity:last 99.82720047765399
+scalar WarehouseWSN.sensor[1].energyStorage residualEnergyCapacity:last 99.82720047765342
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -3402,7 +3401,7 @@ par WarehouseWSN.sensor[2].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[2].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[2].energyStorage residualEnergyCapacity:last 99.82720047765194
+scalar WarehouseWSN.sensor[2].energyStorage residualEnergyCapacity:last 99.8272004776539
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -4548,7 +4547,7 @@ par WarehouseWSN.sensor[3].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[3].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[3].energyStorage residualEnergyCapacity:last 99.82720047766031
+scalar WarehouseWSN.sensor[3].energyStorage residualEnergyCapacity:last 99.82720047766317
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -5694,7 +5693,7 @@ par WarehouseWSN.sensor[4].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[4].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[4].energyStorage residualEnergyCapacity:last 99.82720047765635
+scalar WarehouseWSN.sensor[4].energyStorage residualEnergyCapacity:last 99.82720047765778
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -6840,7 +6839,7 @@ par WarehouseWSN.sensor[5].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[5].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[5].energyStorage residualEnergyCapacity:last 99.8272004776579
+scalar WarehouseWSN.sensor[5].energyStorage residualEnergyCapacity:last 99.82720047765513
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -7986,7 +7985,7 @@ par WarehouseWSN.sensor[6].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[6].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[6].energyStorage residualEnergyCapacity:last 99.82720047765633
+scalar WarehouseWSN.sensor[6].energyStorage residualEnergyCapacity:last 99.82720047765639
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -9132,7 +9131,7 @@ par WarehouseWSN.sensor[7].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[7].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[7].energyStorage residualEnergyCapacity:last 99.82720047765822
+scalar WarehouseWSN.sensor[7].energyStorage residualEnergyCapacity:last 99.82720047765659
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -10278,7 +10277,7 @@ par WarehouseWSN.sensor[8].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[8].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[8].energyStorage residualEnergyCapacity:last 99.8272004776542
+scalar WarehouseWSN.sensor[8].energyStorage residualEnergyCapacity:last 99.82720047765517
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -11424,7 +11423,7 @@ par WarehouseWSN.sensor[9].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[9].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[9].energyStorage residualEnergyCapacity:last 99.82720047765483
+scalar WarehouseWSN.sensor[9].energyStorage residualEnergyCapacity:last 99.82720047765513
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -12570,7 +12569,7 @@ par WarehouseWSN.sensor[10].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[10].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[10].energyStorage residualEnergyCapacity:last 99.8272004776568
+scalar WarehouseWSN.sensor[10].energyStorage residualEnergyCapacity:last 99.82720047766107
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -12596,7 +12595,7 @@ par WarehouseWSN.sensor[10].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[10].mobility initialX 20m
 attr unit m
-par WarehouseWSN.sensor[10].mobility initialY 5m
+par WarehouseWSN.sensor[10].mobility initialY 8m
 attr unit m
 par WarehouseWSN.sensor[10].mobility initialZ 0m
 attr unit m
@@ -13716,7 +13715,7 @@ par WarehouseWSN.sensor[11].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[11].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[11].energyStorage residualEnergyCapacity:last 99.82720047765397
+scalar WarehouseWSN.sensor[11].energyStorage residualEnergyCapacity:last 99.82720047765649
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -13742,7 +13741,7 @@ par WarehouseWSN.sensor[11].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[11].mobility initialX 35m
 attr unit m
-par WarehouseWSN.sensor[11].mobility initialY 5m
+par WarehouseWSN.sensor[11].mobility initialY 8m
 attr unit m
 par WarehouseWSN.sensor[11].mobility initialZ 0m
 attr unit m
@@ -14862,7 +14861,7 @@ par WarehouseWSN.sensor[12].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[12].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[12].energyStorage residualEnergyCapacity:last 99.82720047765507
+scalar WarehouseWSN.sensor[12].energyStorage residualEnergyCapacity:last 99.82720047766087
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -14888,7 +14887,7 @@ par WarehouseWSN.sensor[12].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[12].mobility initialX 50m
 attr unit m
-par WarehouseWSN.sensor[12].mobility initialY 5m
+par WarehouseWSN.sensor[12].mobility initialY 8m
 attr unit m
 par WarehouseWSN.sensor[12].mobility initialZ 0m
 attr unit m
@@ -16008,7 +16007,7 @@ par WarehouseWSN.sensor[13].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[13].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[13].energyStorage residualEnergyCapacity:last 99.82720047765666
+scalar WarehouseWSN.sensor[13].energyStorage residualEnergyCapacity:last 99.82720047765811
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -16034,7 +16033,7 @@ par WarehouseWSN.sensor[13].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[13].mobility initialX 65m
 attr unit m
-par WarehouseWSN.sensor[13].mobility initialY 5m
+par WarehouseWSN.sensor[13].mobility initialY 8m
 attr unit m
 par WarehouseWSN.sensor[13].mobility initialZ 0m
 attr unit m
@@ -17154,7 +17153,7 @@ par WarehouseWSN.sensor[14].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[14].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[14].energyStorage residualEnergyCapacity:last 99.82720047765797
+scalar WarehouseWSN.sensor[14].energyStorage residualEnergyCapacity:last 99.8272004776578
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -17180,7 +17179,7 @@ par WarehouseWSN.sensor[14].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[14].mobility initialX 80m
 attr unit m
-par WarehouseWSN.sensor[14].mobility initialY 5m
+par WarehouseWSN.sensor[14].mobility initialY 8m
 attr unit m
 par WarehouseWSN.sensor[14].mobility initialZ 0m
 attr unit m
@@ -17309,7 +17308,7 @@ attr recordingmode max
 attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
 attr title "queue length, max"
 attr unit pk
-scalar WarehouseWSN.sensor[14].wlan[0].queue queueLength:timeavg 0.00031780499857777774
+scalar WarehouseWSN.sensor[14].wlan[0].queue queueLength:timeavg 0.0003177997655111111
 attr autoWarmupFilter false
 attr interpolationmode sample-hold
 attr recordingmode timeavg
@@ -17330,7 +17329,7 @@ attr recordingmode max
 attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
 attr title "queue bit length, max"
 attr unit b
-scalar WarehouseWSN.sensor[14].wlan[0].queue queueBitLength:timeavg 0.23390447895324443
+scalar WarehouseWSN.sensor[14].wlan[0].queue queueBitLength:timeavg 0.2339006274161778
 attr autoWarmupFilter false
 attr interpolationmode sample-hold
 attr recordingmode timeavg
@@ -17339,12 +17338,12 @@ attr title "queue bit length, timeavg"
 attr unit b
 statistic WarehouseWSN.sensor[14].wlan[0].queue queueingTime:histogram
 field count 88
-field mean 0.00032502783945454546
-field stddev 0.00019473624420401962
-field min 2.7073294e-05
-field max 0.000647073294
-field sum 0.028602449872
-field sqrsum 1.2595824303184918e-05
+field mean 0.00032502248745454543
+field stddev 0.00019473624420401957
+field min 2.7067942e-05
+field max 0.000647067942
+field sum 0.028601978896
+field sqrsum 1.259551814508215e-05
 attr interpolationmode none
 attr recordingmode histogram
 attr source queueingTime(packetPulled)
@@ -18331,7 +18330,7 @@ par WarehouseWSN.sensor[15].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[15].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[15].energyStorage residualEnergyCapacity:last 99.82720047766131
+scalar WarehouseWSN.sensor[15].energyStorage residualEnergyCapacity:last 99.82720047766071
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -19475,7 +19474,7 @@ par WarehouseWSN.sensor[16].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[16].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[16].energyStorage residualEnergyCapacity:last 99.82720047765801
+scalar WarehouseWSN.sensor[16].energyStorage residualEnergyCapacity:last 99.8272004776576
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -20621,7 +20620,7 @@ par WarehouseWSN.sensor[17].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[17].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[17].energyStorage residualEnergyCapacity:last 99.8272004776557
+scalar WarehouseWSN.sensor[17].energyStorage residualEnergyCapacity:last 99.827200477657
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -21767,7 +21766,7 @@ par WarehouseWSN.sensor[18].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[18].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[18].energyStorage residualEnergyCapacity:last 99.82720047765805
+scalar WarehouseWSN.sensor[18].energyStorage residualEnergyCapacity:last 99.82720047765703
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -22913,7 +22912,7 @@ par WarehouseWSN.sensor[19].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[19].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[19].energyStorage residualEnergyCapacity:last 99.82720047765612
+scalar WarehouseWSN.sensor[19].energyStorage residualEnergyCapacity:last 99.82720047765667
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -24059,7 +24058,7 @@ par WarehouseWSN.sensor[20].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[20].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[20].energyStorage residualEnergyCapacity:last 99.82720047765983
+scalar WarehouseWSN.sensor[20].energyStorage residualEnergyCapacity:last 99.82720047765933
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -25205,7 +25204,7 @@ par WarehouseWSN.sensor[21].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[21].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[21].energyStorage residualEnergyCapacity:last 99.82720047765758
+scalar WarehouseWSN.sensor[21].energyStorage residualEnergyCapacity:last 99.82720047765673
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -26351,7 +26350,7 @@ par WarehouseWSN.sensor[22].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[22].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[22].energyStorage residualEnergyCapacity:last 99.82720047765628
+scalar WarehouseWSN.sensor[22].energyStorage residualEnergyCapacity:last 99.82720047765788
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -27497,7 +27496,7 @@ par WarehouseWSN.sensor[23].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[23].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[23].energyStorage residualEnergyCapacity:last 99.827200477654
+scalar WarehouseWSN.sensor[23].energyStorage residualEnergyCapacity:last 99.82720047765365
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -28643,7 +28642,7 @@ par WarehouseWSN.sensor[24].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[24].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[24].energyStorage residualEnergyCapacity:last 99.82720047765666
+scalar WarehouseWSN.sensor[24].energyStorage residualEnergyCapacity:last 99.82720047765689
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -29789,7 +29788,7 @@ par WarehouseWSN.sensor[25].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[25].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[25].energyStorage residualEnergyCapacity:last 99.8272004776561
+scalar WarehouseWSN.sensor[25].energyStorage residualEnergyCapacity:last 99.8272004776562
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -29815,7 +29814,7 @@ par WarehouseWSN.sensor[25].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[25].mobility initialX 20m
 attr unit m
-par WarehouseWSN.sensor[25].mobility initialY 55m
+par WarehouseWSN.sensor[25].mobility initialY 52m
 attr unit m
 par WarehouseWSN.sensor[25].mobility initialZ 0m
 attr unit m
@@ -30935,7 +30934,7 @@ par WarehouseWSN.sensor[26].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[26].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[26].energyStorage residualEnergyCapacity:last 99.8272004776583
+scalar WarehouseWSN.sensor[26].energyStorage residualEnergyCapacity:last 99.8272004776582
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -30961,7 +30960,7 @@ par WarehouseWSN.sensor[26].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[26].mobility initialX 35m
 attr unit m
-par WarehouseWSN.sensor[26].mobility initialY 55m
+par WarehouseWSN.sensor[26].mobility initialY 52m
 attr unit m
 par WarehouseWSN.sensor[26].mobility initialZ 0m
 attr unit m
@@ -32081,7 +32080,7 @@ par WarehouseWSN.sensor[27].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[27].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[27].energyStorage residualEnergyCapacity:last 99.82720047765746
+scalar WarehouseWSN.sensor[27].energyStorage residualEnergyCapacity:last 99.82720047765748
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -32107,7 +32106,7 @@ par WarehouseWSN.sensor[27].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[27].mobility initialX 50m
 attr unit m
-par WarehouseWSN.sensor[27].mobility initialY 55m
+par WarehouseWSN.sensor[27].mobility initialY 52m
 attr unit m
 par WarehouseWSN.sensor[27].mobility initialZ 0m
 attr unit m
@@ -33227,7 +33226,7 @@ par WarehouseWSN.sensor[28].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[28].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[28].energyStorage residualEnergyCapacity:last 99.82720047765113
+scalar WarehouseWSN.sensor[28].energyStorage residualEnergyCapacity:last 99.82720047765669
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -33253,7 +33252,7 @@ par WarehouseWSN.sensor[28].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[28].mobility initialX 65m
 attr unit m
-par WarehouseWSN.sensor[28].mobility initialY 55m
+par WarehouseWSN.sensor[28].mobility initialY 52m
 attr unit m
 par WarehouseWSN.sensor[28].mobility initialZ 0m
 attr unit m
@@ -34373,7 +34372,7 @@ par WarehouseWSN.sensor[29].energyStorage initialCapacity 100J
 attr unit J
 par WarehouseWSN.sensor[29].energyStorage printCapacityStep 0.001J
 attr unit J
-scalar WarehouseWSN.sensor[29].energyStorage residualEnergyCapacity:last 99.82720047765679
+scalar WarehouseWSN.sensor[29].energyStorage residualEnergyCapacity:last 99.82720047765454
 attr interpolationmode linear
 attr recordingmode last
 attr source residualEnergyCapacityChanged
@@ -34399,7 +34398,7 @@ par WarehouseWSN.sensor[29].mobility constraintAreaMaxZ "inf m"
 attr unit m
 par WarehouseWSN.sensor[29].mobility initialX 80m
 attr unit m
-par WarehouseWSN.sensor[29].mobility initialY 55m
+par WarehouseWSN.sensor[29].mobility initialY 52m
 attr unit m
 par WarehouseWSN.sensor[29].mobility initialZ 0m
 attr unit m
@@ -36475,12 +36474,12 @@ attr source packetReceived
 attr title "packets received, count"
 statistic WarehouseWSN.gateway.app[0] endToEndDelay:stats
 field count 2640
-field mean 0.0014588830007272726
-field stddev 0.0002731197401107142
-field min 0.001098050035
+field mean 0.0014588818454939394
+field stddev 0.0002731199786596598
+field min 0.001098051025
 field max 0.002954992274
-field sum 3.85145112192
-field sqrsum 0.005815671171545332
+field sum 3.851448072104
+field sqrsum 0.0058156626167740755
 attr interpolationmode none
 attr recordingmode stats
 attr source dataAge(packetReceived)

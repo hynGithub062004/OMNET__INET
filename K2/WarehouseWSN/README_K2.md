@@ -1,6 +1,6 @@
 # WarehouseWSN - Kịch bản K2
 
-K2 mở rộng K1 của TV1 từ 10 lên 30 sensor, giữ gateway ở góc kho. Project đã chạy thật đủ 5 seed 0–4 trên OMNeT++ 6.4.0 và INET 4.7.0. Kết quả cho thấy PDR vẫn đạt 100%, delay trung bình 1,457107 ms và năng lượng còn lại 99,827201 J/sensor.
+K2 mở rộng K1 của TV1 từ 10 lên 30 sensor, giữ gateway ở góc kho. Project đã chạy thật đủ 5 seed 0–4 trên OMNeT++ 6.4.0 và INET 4.7.0. Kết quả cho thấy PDR vẫn đạt 100%, delay trung bình 1,457106 ms và năng lượng còn lại 99,827201 J/sensor.
 
 ## 1. Kế thừa K1
 
@@ -29,8 +29,7 @@ K2/WarehouseWSN/
 └── analysis/
     ├── K2_Energy_Analysis.anf
     ├── analyze_results.py
-    ├── K2_run0.log
-    ├── K2_run1-4.log
+    ├── K2_all_seeds.log
     └── exports/
         ├── K1_K2_per_seed.csv
         ├── K1_K2_summary.csv
@@ -87,12 +86,12 @@ Trong mỗi hàng, X lần lượt bằng 20, 35, 50, 65, 80 m; Z của mọi no
 |---|---:|---|
 | sensor[0]–sensor[4] | 15 | Giữ từ K1 |
 | sensor[5]–sensor[9] | 45 | Giữ từ K1 |
-| sensor[10]–sensor[14] | 5 | Bổ sung |
+| sensor[10]–sensor[14] | 8 | Bổ sung |
 | sensor[15]–sensor[19] | 25 | Bổ sung |
 | sensor[20]–sensor[24] | 35 | Bổ sung |
-| sensor[25]–sensor[29] | 55 | Bổ sung |
+| sensor[25]–sensor[29] | 52 | Bổ sung |
 
-Kết quả là lưới 5 cột × 6 hàng, khoảng cách cột 15 m và khoảng cách hàng 10 m. Không có hai sensor trùng tọa độ. Gateway vẫn tại (5, 5). Sensor xa nhất cách gateway khoảng 90,14 m, nằm trong communication range 100 m. File `analysis/exports/K2_coordinates.csv` lấy từ tham số đã resolve trong scalar, có thể dùng nguyên bộ tọa độ này để triển khai K3 sau này.
+Kết quả là lưới 5 cột × 6 hàng, khoảng cách cột 15 m. Hai hàng ngoài Y=8 và 52 m giữ cách bố trí trong project K2 có sẵn tại máy người dùng; các hàng còn lại ở Y=15, 25, 35 và 45 m. Không có hai sensor trùng tọa độ. Gateway vẫn tại (5, 5). Sensor xa nhất cách gateway khoảng 88,51 m, nằm trong communication range 100 m. File `analysis/exports/K2_coordinates.csv` lấy từ tham số đã resolve trong scalar, có thể dùng nguyên bộ tọa độ này để triển khai K3 sau này.
 
 ![Topology K2 dựng từ tọa độ đã resolve](analysis/exports/K2_Topology.png)
 
@@ -121,6 +120,12 @@ Mở PowerShell tại `K2/WarehouseWSN`:
 ```
 
 Script chạy đủ seed 0–4, tự thiết lập PATH trong tiến trình hiện tại, nạp `.nedexclusions` của INET và kiểm tra mã thoát. Có thể truyền `-Runs '2..4'` để chỉ chạy các run còn thiếu. Đổi hai đường dẫn khi chuyển sang máy khác.
+
+### Project đã tích hợp trên máy này
+
+Đường dẫn: `D:\Apps\omnet++\omnetpp-6.4.0-windows-x86_64\omnetpp-6.4.0\samples\WarehouseWSN`.
+
+`simulations/omnetpp.ini` đã được cập nhật để K2 kế thừa K1. File NED, cách hiển thị, metadata IDE và executable hiện có được giữ nguyên. Cấu hình nguồn trước khi cập nhật nằm trong `backups/before_K2_20261029`. Hai hàng Y=8 và 52 m và tên config `K2_Base` từ bản nháp được giữ lại; `K2_Base` hiện là alias của `K2_Final` để tránh hỏng lựa chọn config cũ. Trong project tích hợp, không cần import lại project có cùng tên; bấm Refresh trong IDE và chọn `K2_Final`.
 
 Để quan sát bằng Qtenv:
 
@@ -158,7 +163,7 @@ Mở terminal tại project, dùng Python 3.10 trở lên:
 python analysis/analyze_results.py
 ```
 
-Lệnh mặc định chỉ dùng thư viện chuẩn, cần đủ 5 scalar K1 tại `../../K1/WarehouseWSN/simulations/results` và đủ 5 scalar K2 tại `simulations/results`. Nếu dữ liệu ở nơi khác, truyền `--k1 '<thu muc scalar K1>' --k2 '<thu muc scalar K2>'`.
+Lệnh mặc định chỉ dùng thư viện chuẩn, cần đủ 5 scalar K1 tại `../../K1/WarehouseWSN/simulations/results` và đủ 5 scalar K2 tại `simulations/results`. Khi tích hợp vào project có sẵn trong thư mục samples, baseline K1 được đặt tại `analysis/baseline_K1` và chương trình tự chọn vị trí này nếu không có cấu trúc repository K1/K2. Nếu dữ liệu ở nơi khác, truyền `--k1 '<thu muc scalar K1>' --k2 '<thu muc scalar K2>'`.
 
 Để kiểm tra toàn bộ vector và vẽ lại bằng matplotlib:
 
@@ -175,18 +180,18 @@ Chương trình từ chối thiếu seed, sai config, thiếu sensor, packet cou
 
 | Seed | Sent | Received | PDR (%) | Delay mean (ms) | Energy mean (J/sensor) |
 |---|---:|---:|---:|---:|---:|
-| 0 | 2.640 | 2.640 | 100 | 1,431719 | 99,827200576 |
-| 1 | 2.640 | 2.640 | 100 | 1,470729 | 99,827200399 |
-| 2 | 2.640 | 2.640 | 100 | 1,521719 | 99,827200653 |
-| 3 | 2.640 | 2.640 | 100 | 1,402486 | 99,827200911 |
-| 4 | 2.640 | 2.640 | 100 | 1,458883 | 99,827200478 |
+| 0 | 2.640 | 2.640 | 100 | 1,431717 | 99,827200576 |
+| 1 | 2.640 | 2.640 | 100 | 1,470728 | 99,827200399 |
+| 2 | 2.640 | 2.640 | 100 | 1,521717 | 99,827200653 |
+| 3 | 2.640 | 2.640 | 100 | 1,402484 | 99,827200911 |
+| 4 | 2.640 | 2.640 | 100 | 1,458882 | 99,827200478 |
 
 Giá trị ± là **độ lệch chuẩn mẫu giữa 5 seed**, không phải khoảng tin cậy 95%.
 
 | Chỉ số | K1 | K2 |
 |---|---:|---:|
 | PDR (%) | 100 ± 0 | 100 ± 0 |
-| Delay mean (ms) | 1,439329 ± 0,047127 | 1,457107 ± 0,044698 |
+| Delay mean (ms) | 1,439329 ± 0,047127 | 1,457106 ± 0,044697 |
 | Energy Remaining (J/sensor) | 99,940533389 ± 0,000000290 | 99,827200603 ± 0,000000197 |
 | Energy Consumption (J/sensor) | 0,059466611 | 0,172799397 |
 | Goodput payload (bit/s) | 5.006,222 | 15.018,667 |
@@ -204,7 +209,7 @@ Các đường năng lượng của 30 sensor gần như trùng nhau ở cấu h
 
 **Độ tin cậy:** tăng từ 10 lên 30 sensor làm số gói gửi tăng đúng 3 lần, trong khi PDR vẫn 100% trên cả 5 seed. Không có packet loss, retry hay given-up trong thí nghiệm này. Chưa có bằng chứng mạng bị quá tải; không diễn giải giả thuyết tranh chấp tăng thành một kết quả đã được chứng minh.
 
-**Độ trễ:** mean tăng khoảng 0,017778 ms, tương đương 1,24%. Mức chênh lệch nhỏ so với dao động giữa seed, nên không khẳng định khác biệt có ý nghĩa thống kê khi chưa làm kiểm định. Cả 5 delay mean K2 đều thấp hơn ngưỡng 120 ms được nêu trong dàn ý; không tự gán thêm ngưỡng PDR hoặc dung lượng pin đạt/không đạt.
+**Độ trễ:** mean tăng khoảng 0,017777 ms, tương đương 1,24%. Mức chênh lệch nhỏ so với dao động giữa seed, nên không khẳng định khác biệt có ý nghĩa thống kê khi chưa làm kiểm định. Cả 5 delay mean K2 đều thấp hơn ngưỡng 120 ms được nêu trong dàn ý; không tự gán thêm ngưỡng PDR hoặc dung lượng pin đạt/không đạt.
 
 **Năng lượng:** năng lượng còn lại giảm khoảng 0,113333 J/sensor. Năng lượng tiêu thụ trung bình tăng khoảng 2,91 lần; 10 sensor cũ cũng có cùng mức giảm này. Bộ đếm MAC cho thấy mỗi sensor loại bỏ 2.552 frame không gửi cho mình trong K2, so với 792 ở K1; con số bằng số frame dữ liệu của các sensor còn lại, 29 × 88 so với 9 × 88. Đây là bằng chứng về overhearing trong mô hình, phù hợp với việc tăng thời gian radio nhận dữ liệu của node khác. Do retry bằng 0, không quy mức tăng tiêu thụ cho truyền lại.
 
