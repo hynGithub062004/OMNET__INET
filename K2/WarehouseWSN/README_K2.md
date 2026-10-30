@@ -1,5 +1,7 @@
 # WarehouseWSN - Kịch bản K2
 
+Nếu mở Analysis đầy đủ bị chậm, dùng `analysis/K2_Energy_Preview.anf`. Bản này dùng file `K2_Energy_Preview.vec` nhẹ đi kèm, giữ đủ 30 sensor của seed 0 với các mẫu thật được lấy thưa (mỗi 100 mẫu và mẫu cuối). Dữ liệu này chỉ phục vụ hiển thị; bảng KPI vẫn tính từ kết quả đầy đủ.
+
 K2 mở rộng K1 của TV1 từ 10 lên 30 sensor, giữ gateway ở góc kho. Project đã chạy thật đủ 5 seed 0–4 trên OMNeT++ 6.4.0 và INET 4.7.0. Kết quả cho thấy PDR vẫn đạt 100%, delay trung bình 1,457106 ms và năng lượng còn lại 99,827201 J/sensor.
 
 ## 1. Kế thừa K1
