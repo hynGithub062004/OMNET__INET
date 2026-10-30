@@ -1,0 +1,166 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2025 Andras Varga, OpenSim Ltd.
+Version: 6.4.0, build: 260506-2cf25223fe, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from .:  2
+Loading NED files from D:\Apps\omnet++\omnetpp-6.4.0-windows-x86_64\omnetpp-6.4.0\samples\inet-4.7.0/src:  1214
+
+Preparing for running configuration K2_Final, run #0...
+Assigned runID=K2_Final-0-20261029-13:59:48-13664
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.9e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 58.1758MiB
+** Event #136448   t=33.963812847449   Elapsed: 2.00133s (0m 02s)  33% completed  (6% total)
+     Speed:     ev/sec=68179.8   simsec/sec=16.9708   ev/simsec=4017.48
+     Messages:  created: 211811   present: 945   in FES: 92   Memory (RSS): 73.1016MiB
+** Event #522724   t=100   Elapsed: -1833.2s (-30m -34s)  100% completed  (20% total)
+     Speed:     ev/sec=157.037   simsec/sec=0.02644   ev/simsec=5939.39
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 78.5234MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522724
+
+Calling finish() at end of Run #0...
+
+Preparing for running configuration K2_Final, run #1...
+Assigned runID=K2_Final-1-20261029-14:00:01-13664
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 2.4e-05s (0m 00s)  0% completed  (20% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 58.9844MiB
+** Event #89600   t=26.093756805472   Elapsed: 2.00198s (0m 02s)  26% completed  (25% total)
+     Speed:     ev/sec=44756.5   simsec/sec=13.0341   ev/simsec=3433.81
+     Messages:  created: 139360   present: 882   in FES: 67   Memory (RSS): 66.8594MiB
+** Event #182528   t=41.671194288019   Elapsed: 4.00641s (0m 04s)  41% completed  (28% total)
+     Speed:     ev/sec=46361.5   simsec/sec=7.77154   ev/simsec=5965.55
+     Messages:  created: 282996   present: 927   in FES: 80   Memory (RSS): 78.332MiB
+** Event #234496   t=50.399127030368   Elapsed: 6.00712s (0m 06s)  50% completed  (30% total)
+     Speed:     ev/sec=25974.7   simsec/sec=4.36241   ev/simsec=5954.22
+     Messages:  created: 363325   present: 927   in FES: 78   Memory (RSS): 78.5664MiB
+** Event #338688   t=68.002137475233   Elapsed: 8.01498s (0m 08s)  68% completed  (33% total)
+     Speed:     ev/sec=51892.2   simsec/sec=8.76707   ev/simsec=5918.99
+     Messages:  created: 524402   present: 967   in FES: 93   Memory (RSS): 78.582MiB
+** Event #387840   t=76.237977424359   Elapsed: 10.0186s (0m 10s)  76% completed  (35% total)
+     Speed:     ev/sec=24530.9   simsec/sec=4.11037   ev/simsec=5968.06
+     Messages:  created: 600320   present: 929   in FES: 80   Memory (RSS): 78.625MiB
+** Event #489984   t=93.39978393256   Elapsed: 12.0204s (0m 12s)  93% completed  (38% total)
+     Speed:     ev/sec=51027.6   simsec/sec=8.57344   ev/simsec=5951.82
+     Messages:  created: 758208   present: 940   in FES: 83   Memory (RSS): 78.625MiB
+** Event #522779   t=100   Elapsed: 12.646s (0m 12s)  100% completed  (40% total)
+     Speed:     ev/sec=52416.8   simsec/sec=8.96793   ev/simsec=5844.92
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 78.625MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522779
+
+Calling finish() at end of Run #1...
+
+Preparing for running configuration K2_Final, run #2...
+Assigned runID=K2_Final-2-20261029-14:00:16-13664
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 3.9e-05s (0m 00s)  0% completed  (40% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 58.9062MiB
+** Event #88576   t=25.819844782203   Elapsed: 2.00484s (0m 02s)  25% completed  (45% total)
+     Speed:     ev/sec=44182.1   simsec/sec=12.8789   ev/simsec=3430.58
+     Messages:  created: 137793   present: 935   in FES: 84   Memory (RSS): 66.6211MiB
+** Event #183552   t=41.818456782203   Elapsed: 4.00959s (0m 04s)  41% completed  (48% total)
+     Speed:     ev/sec=47375.6   simsec/sec=7.98037   ev/simsec=5936.51
+     Messages:  created: 284634   present: 940   in FES: 92   Memory (RSS): 78.3047MiB
+** Event #239104   t=51.268455651667   Elapsed: 6.01377s (0m 06s)  51% completed  (50% total)
+     Speed:     ev/sec=27717.9   simsec/sec=4.71511   ev/simsec=5878.52
+     Messages:  created: 370470   present: 945   in FES: 93   Memory (RSS): 78.4219MiB
+** Event #344576   t=69.027104381679   Elapsed: 8.01544s (0m 08s)  69% completed  (53% total)
+     Speed:     ev/sec=52691.9   simsec/sec=8.8719   ev/simsec=5939.19
+     Messages:  created: 533490   present: 879   in FES: 66   Memory (RSS): 78.457MiB
+** Event #396544   t=77.622802145461   Elapsed: 10.016s (0m 10s)  77% completed  (55% total)
+     Speed:     ev/sec=25976.8   simsec/sec=4.29666   ev/simsec=6045.82
+     Messages:  created: 613792   present: 915   in FES: 74   Memory (RSS): 78.4961MiB
+** Event #497920   t=94.684814514036   Elapsed: 12.02s (0m 12s)  94% completed  (58% total)
+     Speed:     ev/sec=50586.9   simsec/sec=8.51399   ev/simsec=5941.62
+     Messages:  created: 770490   present: 872   in FES: 61   Memory (RSS): 78.4961MiB
+** Event #522756   t=100   Elapsed: 12.4783s (0m 12s)  100% completed  (60% total)
+     Speed:     ev/sec=54193.3   simsec/sec=9.41631   ev/simsec=5755.26
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 78.4961MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522756
+
+Calling finish() at end of Run #2...
+
+Preparing for running configuration K2_Final, run #3...
+Assigned runID=K2_Final-3-20261029-14:00:31-13664
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.9e-05s (0m 00s)  0% completed  (60% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 59.0273MiB
+** Event #92160   t=26.438400141583   Elapsed: 2.00351s (0m 02s)  26% completed  (65% total)
+     Speed:     ev/sec=46000.3   simsec/sec=13.1962   ev/simsec=3485.88
+     Messages:  created: 143333   present: 887   in FES: 68   Memory (RSS): 66.8203MiB
+** Event #186112   t=42.2162270691   Elapsed: 4.68086s (0m 04s)  42% completed  (68% total)
+     Speed:     ev/sec=35091.5   simsec/sec=5.89308   ev/simsec=5954.69
+     Messages:  created: 288607   present: 939   in FES: 92   Memory (RSS): 78.4844MiB
+** Event #275712   t=57.279615636741   Elapsed: 6.68554s (0m 06s)  57% completed  (71% total)
+     Speed:     ev/sec=44695.2   simsec/sec=7.51408   ev/simsec=5948.2
+     Messages:  created: 427082   present: 947   in FES: 93   Memory (RSS): 78.4844MiB
+** Event #366592   t=72.552386259747   Elapsed: 8.68814s (0m 08s)  72% completed  (74% total)
+     Speed:     ev/sec=45381.1   simsec/sec=7.62648   ev/simsec=5950.46
+     Messages:  created: 567552   present: 963   in FES: 93   Memory (RSS): 78.5195MiB
+** Event #414464   t=80.650482262561   Elapsed: 10.6947s (0m 10s)  80% completed  (76% total)
+     Speed:     ev/sec=23857.7   simsec/sec=4.0358   ev/simsec=5911.51
+     Messages:  created: 641507   present: 878   in FES: 65   Memory (RSS): 78.5625MiB
+** Event #510464   t=96.894655198379   Elapsed: 12.7002s (0m 12s)  96% completed  (79% total)
+     Speed:     ev/sec=47869.3   simsec/sec=8.09997   ev/simsec=5909.81
+     Messages:  created: 789984   present: 933   in FES: 93   Memory (RSS): 78.5625MiB
+** Event #522724   t=100   Elapsed: 12.9702s (0m 12s)  100% completed  (80% total)
+     Speed:     ev/sec=45405   simsec/sec=7.7978   ev/simsec=5822.8
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 78.5625MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522724
+
+Calling finish() at end of Run #3...
+
+Preparing for running configuration K2_Final, run #4...
+Assigned runID=K2_Final-4-20261029-14:00:46-13664
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.7e-05s (0m 00s)  0% completed  (80% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 58.8984MiB
+** Event #91392   t=26.436139740515   Elapsed: 2.00508s (0m 02s)  26% completed  (85% total)
+     Speed:     ev/sec=45581.5   simsec/sec=13.1848   ev/simsec=3457.12
+     Messages:  created: 142182   present: 933   in FES: 93   Memory (RSS): 66.7656MiB
+** Event #174080   t=40.363114444172   Elapsed: 4.0065s (0m 04s)  40% completed  (88% total)
+     Speed:     ev/sec=41314.9   simsec/sec=6.95859   ev/simsec=5937.25
+     Messages:  created: 269983   present: 938   in FES: 85   Memory (RSS): 77.0547MiB
+** Event #275712   t=57.548820573791   Elapsed: 6.00792s (0m 06s)  57% completed  (91% total)
+     Speed:     ev/sec=50779   simsec/sec=8.58659   ev/simsec=5913.75
+     Messages:  created: 427082   present: 947   in FES: 93   Memory (RSS): 78.2891MiB
+** Event #440320   t=85.173225505391   Elapsed: 8.00993s (0m 08s)  85% completed  (97% total)
+     Speed:     ev/sec=82221.7   simsec/sec=13.7984   ev/simsec=5958.79
+     Messages:  created: 681535   present: 963   in FES: 92   Memory (RSS): 78.332MiB
+** Event #522724   t=100   Elapsed: 8.74967s (0m 08s)  100% completed  (100% total)
+     Speed:     ev/sec=111395   simsec/sec=18.6914   ev/simsec=5959.67
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 78.332MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522724
+
+Calling finish() at end of Run #4...
+
+Run statistics: total 5, successful 5
+
+End.
