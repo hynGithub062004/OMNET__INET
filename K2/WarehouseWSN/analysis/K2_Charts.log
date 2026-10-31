@@ -1,0 +1,112 @@
+OMNeT++ Discrete Event Simulation  (C) 1992-2025 Andras Varga, OpenSim Ltd.
+Version: 6.4.0, build: 260506-2cf25223fe, edition: Academic Public License -- NOT FOR COMMERCIAL USE
+See the license for distribution terms and warranty disclaimer
+
+Setting up Cmdenv...
+
+Loading NED files from .:  2
+Loading NED files from D:\Apps\omnet++\omnetpp-6.4.0-windows-x86_64\omnetpp-6.4.0\samples\inet-4.7.0/src:  1214
+
+Preparing for running configuration K2_Charts, run #0...
+Assigned runID=K2_Charts-0-20261031-10:00:27-6356
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.4e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 49.9648MiB
+** Event #419328   t=81.623773855287   Elapsed: 2.00124s (0m 02s)  81% completed  (16% total)
+     Speed:     ev/sec=209536   simsec/sec=40.7869   ev/simsec=5137.34
+     Messages:  created: 649091   present: 951   in FES: 92   Memory (RSS): 52.3594MiB
+** Event #522724   t=100   Elapsed: 2.47702s (0m 02s)  100% completed  (20% total)
+     Speed:     ev/sec=217314   simsec/sec=36.521   ev/simsec=5950.37
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 52.6523MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522724
+
+Calling finish() at end of Run #0...
+
+Preparing for running configuration K2_Charts, run #1...
+Assigned runID=K2_Charts-1-20261031-10:00:29-6356
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 2.9e-05s (0m 00s)  0% completed  (20% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 50.7656MiB
+** Event #392192   t=77.0022374239   Elapsed: 2.00029s (0m 02s)  77% completed  (35% total)
+     Speed:     ev/sec=196069   simsec/sec=38.4957   ev/simsec=5093.27
+     Messages:  created: 607064   present: 915   in FES: 74   Memory (RSS): 52.293MiB
+** Event #522779   t=100   Elapsed: 2.62086s (0m 02s)  100% completed  (40% total)
+     Speed:     ev/sec=210429   simsec/sec=35.4645   ev/simsec=5933.51
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 52.5586MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522779
+
+Calling finish() at end of Run #1...
+
+Preparing for running configuration K2_Charts, run #2...
+Assigned runID=K2_Charts-2-20261031-10:00:32-6356
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 1.5e-05s (0m 00s)  0% completed  (40% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 51.1523MiB
+** Event #328960   t=66.421936192535   Elapsed: 2.00139s (0m 02s)  66% completed  (53% total)
+     Speed:     ev/sec=164367   simsec/sec=33.1881   ev/simsec=4952.6
+     Messages:  created: 509392   present: 943   in FES: 93   Memory (RSS): 52.1719MiB
+** Event #522756   t=100   Elapsed: 3.13815s (0m 03s)  100% completed  (60% total)
+     Speed:     ev/sec=170479   simsec/sec=28.6584   ev/simsec=5948.63
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 52.5469MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522756
+
+Calling finish() at end of Run #2...
+
+Preparing for running configuration K2_Charts, run #3...
+Assigned runID=K2_Charts-3-20261031-10:00:36-6356
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 8e-06s (0m 00s)  0% completed  (60% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 50.668MiB
+** Event #325888   t=65.708557942449   Elapsed: 2.00133s (0m 02s)  65% completed  (73% total)
+     Speed:     ev/sec=162837   simsec/sec=32.8326   ev/simsec=4959.61
+     Messages:  created: 504661   present: 953   in FES: 92   Memory (RSS): 51.9453MiB
+** Event #522724   t=100   Elapsed: 3.17075s (0m 03s)  100% completed  (80% total)
+     Speed:     ev/sec=168319   simsec/sec=28.4684   ev/simsec=5912.48
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 52.3203MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522724
+
+Calling finish() at end of Run #3...
+
+Preparing for running configuration K2_Charts, run #4...
+Assigned runID=K2_Charts-4-20261031-10:00:39-6356
+Setting up network "warehousewsn.simulations.WarehouseWSN"...
+Initializing...
+
+Running simulation...
+** Event #0   t=0   Elapsed: 8e-06s (0m 00s)  0% completed  (80% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 868   present: 868   in FES: 62   Memory (RSS): 51.0625MiB
+** Event #337920   t=67.968638148864   Elapsed: 2.00023s (0m 02s)  67% completed  (93% total)
+     Speed:     ev/sec=168941   simsec/sec=33.9804   ev/simsec=4971.72
+     Messages:  created: 523230   present: 891   in FES: 68   Memory (RSS): 52.3633MiB
+** Event #522724   t=100   Elapsed: 3.04323s (0m 03s)  100% completed  (100% total)
+     Speed:     ev/sec=177186   simsec/sec=29.7523   ev/simsec=5955.36
+     Messages:  created: 808800   present: 868   in FES: 30   Memory (RSS): 52.6758MiB
+
+<!> Simulation time limit reached -- at t=100s, event #522724
+
+Calling finish() at end of Run #4...
+
+Run statistics: total 5, successful 5
+
+End.

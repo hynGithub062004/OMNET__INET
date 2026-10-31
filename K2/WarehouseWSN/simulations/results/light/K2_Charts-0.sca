@@ -1,0 +1,906 @@
+version 3
+run K2_Charts-0-20261031-10:00:27-6356
+attr configname K2_Charts
+attr datetime 20261031-10:00:27
+attr datetimef 20261031-100027
+attr experiment K2_Charts
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network warehousewsn.simulations.WarehouseWSN
+attr processid 6356
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config cmdenv-event-banners false
+config cmdenv-express-mode true
+config **.cmdenv-log-level warn
+config extends K2_Final
+config description "Compact KPI scalars for all 30 sensors; energy vectors for sensors 0,14,29"
+config output-scalar-file results/light/K2_Charts-0.sca
+config output-vector-file results/light/K2_Charts-0.vec
+config **.param-recording false
+config *.sensor[*].app[0].packetSent.result-recording-modes count
+config *.gateway.app[0].packetReceived.result-recording-modes count,sum(packetBytes)
+config *.gateway.app[0].endToEndDelay.result-recording-modes stats
+config *.sensor[0].energyStorage.residualEnergyCapacity.result-recording-modes vector,last
+config *.sensor[14].energyStorage.residualEnergyCapacity.result-recording-modes vector,last
+config *.sensor[29].energyStorage.residualEnergyCapacity.result-recording-modes vector,last
+config *.sensor[*].energyStorage.residualEnergyCapacity.result-recording-modes last
+config **.result-recording-modes ""
+config extends K1_Final
+config description "K2: 30 UDP sensors, corner gateway, five independent repetitions"
+config *.numSensors 30
+config output-scalar-file results/K2_Final-0.sca
+config output-vector-file results/K2_Final-0.vec
+config *.sensor[10].mobility.initialX 20m
+config *.sensor[10].mobility.initialY 8m
+config *.sensor[11].mobility.initialX 35m
+config *.sensor[11].mobility.initialY 8m
+config *.sensor[12].mobility.initialX 50m
+config *.sensor[12].mobility.initialY 8m
+config *.sensor[13].mobility.initialX 65m
+config *.sensor[13].mobility.initialY 8m
+config *.sensor[14].mobility.initialX 80m
+config *.sensor[14].mobility.initialY 8m
+config *.sensor[15].mobility.initialX 20m
+config *.sensor[15].mobility.initialY 25m
+config *.sensor[16].mobility.initialX 35m
+config *.sensor[16].mobility.initialY 25m
+config *.sensor[17].mobility.initialX 50m
+config *.sensor[17].mobility.initialY 25m
+config *.sensor[18].mobility.initialX 65m
+config *.sensor[18].mobility.initialY 25m
+config *.sensor[19].mobility.initialX 80m
+config *.sensor[19].mobility.initialY 25m
+config *.sensor[20].mobility.initialX 20m
+config *.sensor[20].mobility.initialY 35m
+config *.sensor[21].mobility.initialX 35m
+config *.sensor[21].mobility.initialY 35m
+config *.sensor[22].mobility.initialX 50m
+config *.sensor[22].mobility.initialY 35m
+config *.sensor[23].mobility.initialX 65m
+config *.sensor[23].mobility.initialY 35m
+config *.sensor[24].mobility.initialX 80m
+config *.sensor[24].mobility.initialY 35m
+config *.sensor[25].mobility.initialX 20m
+config *.sensor[25].mobility.initialY 52m
+config *.sensor[26].mobility.initialX 35m
+config *.sensor[26].mobility.initialY 52m
+config *.sensor[27].mobility.initialX 50m
+config *.sensor[27].mobility.initialY 52m
+config *.sensor[28].mobility.initialX 65m
+config *.sensor[28].mobility.initialY 52m
+config *.sensor[29].mobility.initialX 80m
+config *.sensor[29].mobility.initialY 52m
+config extends K1_AllSensorsEnergy
+config description "Final K1 experiment with five independent repetitions"
+config sim-time-limit 100s
+config warmup-period 10s
+config repeat 5
+config seed-set 0
+config output-scalar-file results/K1_Final-0.sca
+config output-vector-file results/K1_Final-0.vec
+config *.sensor[*].app[0].startTime "uniform(11s, 12s)"
+config *.sensor[*].app[0].stopTime 99s
+config *.sensor[*].app[0].packetSent.result-recording-modes count
+config *.gateway.app[0].packetReceived.result-recording-modes count
+config *.gateway.app[0].endToEndDelay.result-recording-modes vector,stats
+config *.sensor[*].energyStorage.residualEnergyCapacity.result-recording-modes vector,last
+config *.sensor[*].wlan[0].radio.energyConsumer.powerConsumption.result-recording-modes vector
+config *.visualizer.mediumVisualizer.displaySignals false
+config *.visualizer.physicalLinkVisualizer.displayLinks false
+config *.visualizer.energyStorageVisualizer.displayEnergyStorages false
+config *.sensor[*].wlan[0].radio.displayCommunicationRange false
+config extends K1_AllSensorsCsmaAck
+config description "K1 with 10 UDP sensors, CSMA/CA, MAC ACK and energy model"
+config sim-time-limit 20s
+config *.sensor[*].hasStatus true
+config *.sensor[*].energyStorage.typename SimpleEpEnergyStorage
+config *.sensor[*].energyStorage.nominalCapacity 100J
+config *.sensor[*].energyStorage.initialCapacity 100J
+config *.sensor[*].energyStorage.printCapacityStep 0.001J
+config *.sensor[*].wlan[0].radio.energyConsumer.typename SensorStateBasedEpEnergyConsumer
+config *.sensor[*].energyStorage.residualEnergyCapacity.result-recording-modes vector,last
+config *.sensor[*].wlan[0].radio.energyConsumer.powerConsumption.result-recording-modes vector
+config *.visualizer.energyStorageVisualizer.displayEnergyStorages true
+config extends K1_OneSensorCsmaAck
+config description "K1 with 10 UDP sensors, CSMA/CA, interference and MAC ACK"
+config sim-time-limit 20s
+config *.sensor[*].numApps 1
+config *.sensor[*].app[0].typename UdpBasicApp
+config *.sensor[*].app[0].destAddresses "\"gateway\""
+config *.sensor[*].app[0].destPort 5000
+config *.sensor[*].app[0].messageLength 64B
+config *.sensor[*].app[0].sendInterval 1s
+config *.sensor[*].app[0].startTime "uniform(1s, 2s)"
+config *.sensor[*].app[0].stopTime 19s
+config *.sensor[*].app[0].packetName "\"SensorData\""
+config *.gateway.numApps 1
+config *.gateway.app[0].typename UdpSink
+config *.gateway.app[0].localPort 5000
+config *.sensor[*].wlan[0].radio.displayCommunicationRange false
+config *.visualizer.mediumVisualizer.displaySignals true
+config *.visualizer.physicalLinkVisualizer.displayLinks true
+config *.visualizer.physicalLinkVisualizer.packetFilter "\"SensorData*\""
+config extends K1_Coordinates
+config description "K1 validation with one UDP sensor, CSMA/CA, interference and MAC ACK"
+config sim-time-limit 10s
+config *.configurator.addStaticRoutes true
+config *.sensor[*].ipv4.arp.typename GlobalArp
+config *.gateway.ipv4.arp.typename GlobalArp
+config *.sensor[0].numApps 1
+config *.sensor[0].app[0].typename UdpBasicApp
+config *.sensor[0].app[0].destAddresses "\"gateway\""
+config *.sensor[0].app[0].destPort 5000
+config *.sensor[0].app[0].messageLength 64B
+config *.sensor[0].app[0].sendInterval 1s
+config *.sensor[0].app[0].startTime 1s
+config *.sensor[0].app[0].stopTime 9s
+config *.sensor[0].app[0].packetName "\"SensorData\""
+config *.sensor[*].numApps 0
+config *.gateway.numApps 1
+config *.gateway.app[0].typename UdpSink
+config *.gateway.app[0].localPort 5000
+config *.sensor[*].wlan[0].typename WirelessInterface
+config *.gateway.wlan[0].typename WirelessInterface
+config *.radioMedium.signalAnalogRepresentation "\"unitDisk\""
+config *.sensor[*].wlan[0].radio.typename GenericRadio
+config *.gateway.wlan[0].radio.typename GenericRadio
+config *.sensor[*].wlan[0].radio.signalAnalogRepresentation "\"unitDisk\""
+config *.gateway.wlan[0].radio.signalAnalogRepresentation "\"unitDisk\""
+config *.sensor[*].wlan[0].radio.transmitter.analogModel.communicationRange 100m
+config *.gateway.wlan[0].radio.transmitter.analogModel.communicationRange 100m
+config *.sensor[*].wlan[0].radio.transmitter.analogModel.interferenceRange 120m
+config *.gateway.wlan[0].radio.transmitter.analogModel.interferenceRange 120m
+config *.sensor[*].wlan[0].radio.receiver.ignoreInterference false
+config *.gateway.wlan[0].radio.receiver.ignoreInterference false
+config *.sensor[*].wlan[0].mac.typename CsmaCaMac
+config *.gateway.wlan[0].mac.typename CsmaCaMac
+config *.sensor[*].wlan[0].mac.useAck true
+config *.gateway.wlan[0].mac.useAck true
+config *.sensor[*].wlan[0].mac.ackTimeout 300us
+config *.gateway.wlan[0].mac.ackTimeout 300us
+config *.sensor[*].wlan[0].mac.headerLength 23B
+config *.gateway.wlan[0].mac.headerLength 23B
+config *.sensor[*].wlan[0].queue.typename DropTailQueue
+config *.gateway.wlan[0].queue.typename DropTailQueue
+config *.sensor[*].wlan[0].queue.packetCapacity 50
+config *.gateway.wlan[0].queue.packetCapacity 50
+config *.sensor[*].wlan[0].mac.bitrate 1Mbps
+config *.gateway.wlan[0].mac.bitrate 1Mbps
+config *.sensor[*].wlan[0].radio.transmitter.bitrate 1Mbps
+config *.gateway.wlan[0].radio.transmitter.bitrate 1Mbps
+config *.sensor[0].wlan[0].radio.displayCommunicationRange true
+config *.visualizer.mediumVisualizer.displaySignals true
+config *.visualizer.physicalLinkVisualizer.displayLinks true
+config *.visualizer.physicalLinkVisualizer.packetFilter "\"SensorData*\""
+config extends K1_Minimal
+config description "K1 with fixed coordinates for 10 sensors and one corner gateway"
+config *.sensor[*].mobility.typename StationaryMobility
+config *.gateway.mobility.typename StationaryMobility
+config *.sensor[*].mobility.initFromDisplayString false
+config *.gateway.mobility.initFromDisplayString false
+config *.sensor[*].mobility.initialZ 0m
+config *.gateway.mobility.initialZ 0m
+config *.gateway.mobility.initialX 5m
+config *.gateway.mobility.initialY 5m
+config *.sensor[0].mobility.initialX 20m
+config *.sensor[0].mobility.initialY 15m
+config *.sensor[1].mobility.initialX 35m
+config *.sensor[1].mobility.initialY 15m
+config *.sensor[2].mobility.initialX 50m
+config *.sensor[2].mobility.initialY 15m
+config *.sensor[3].mobility.initialX 65m
+config *.sensor[3].mobility.initialY 15m
+config *.sensor[4].mobility.initialX 80m
+config *.sensor[4].mobility.initialY 15m
+config *.sensor[5].mobility.initialX 20m
+config *.sensor[5].mobility.initialY 45m
+config *.sensor[6].mobility.initialX 35m
+config *.sensor[6].mobility.initialY 45m
+config *.sensor[7].mobility.initialX 50m
+config *.sensor[7].mobility.initialY 45m
+config *.sensor[8].mobility.initialX 65m
+config *.sensor[8].mobility.initialY 45m
+config *.sensor[9].mobility.initialX 80m
+config *.sensor[9].mobility.initialY 45m
+config *.visualizer.sceneVisualizer.sceneMinX 0m
+config *.visualizer.sceneVisualizer.sceneMinY 0m
+config *.visualizer.sceneVisualizer.sceneMinZ 0m
+config *.visualizer.sceneVisualizer.sceneMaxX 100m
+config *.visualizer.sceneVisualizer.sceneMaxY 60m
+config *.visualizer.sceneVisualizer.sceneMaxZ 1m
+config *.visualizer.sceneVisualizer.viewScale "\"8 8\""
+config *.visualizer.sceneVisualizer.viewTranslation "\"60 60\""
+config description "Minimal topology with 10 sensors and one gateway"
+config *.numSensors 10
+config network warehousewsn.simulations.WarehouseWSN
+config sim-time-limit 10s
+config *.radioMedium.backgroundNoise.power -110dBm
+
+scalar WarehouseWSN.radioMedium.propagation "Arrival computation count" 158400
+scalar WarehouseWSN.radioMedium "transmission count" 5280
+scalar WarehouseWSN.radioMedium "signal send count" 158400
+scalar WarehouseWSN.radioMedium "reception computation count" 158400
+scalar WarehouseWSN.radioMedium "interference computation count" 480542
+scalar WarehouseWSN.radioMedium "reception decision computation count" 158400
+scalar WarehouseWSN.radioMedium "listening decision computation count" 163742
+scalar WarehouseWSN.radioMedium "reception cache hit" 85.71428571428571
+attr unit %
+scalar WarehouseWSN.radioMedium "interference cache hit" 66.66666666666667
+attr unit %
+scalar WarehouseWSN.radioMedium "noise cache hit" 0
+attr unit %
+scalar WarehouseWSN.radioMedium "snir cache hit" 50
+attr unit %
+scalar WarehouseWSN.radioMedium "reception decision cache hit" 50
+attr unit %
+scalar WarehouseWSN.radioMedium "reception result cache hit" 0
+attr unit %
+scalar WarehouseWSN.sensor[0].energyStorage residualEnergyCapacity:last 99.82720057554715
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[0].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[0].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[0].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[0].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[0].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[0].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[0].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[0].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[0].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[0].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[0].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[1].energyStorage residualEnergyCapacity:last 99.82720057554344
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[1].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[1].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[1].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[1].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[1].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[1].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[1].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[1].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[1].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[1].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[1].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[2].energyStorage residualEnergyCapacity:last 99.8272005755449
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[2].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[2].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[2].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[2].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[2].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[2].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[2].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[2].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[2].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[2].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[2].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[3].energyStorage residualEnergyCapacity:last 99.8272005755528
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[3].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[3].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[3].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[3].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[3].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[3].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[3].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[3].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[3].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[3].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[3].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[4].energyStorage residualEnergyCapacity:last 99.82720057554711
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[4].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[4].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[4].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[4].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[4].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[4].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[4].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[4].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[4].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[4].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[4].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[5].energyStorage residualEnergyCapacity:last 99.8272005755453
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[5].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[5].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[5].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[5].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[5].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[5].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[5].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[5].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[5].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[5].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[5].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[6].energyStorage residualEnergyCapacity:last 99.8272005755465
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[6].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[6].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[6].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[6].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[6].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[6].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[6].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[6].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[6].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[6].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[6].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[7].energyStorage residualEnergyCapacity:last 99.82720057554674
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[7].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[7].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[7].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[7].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[7].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[7].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[7].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[7].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[7].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[7].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[7].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[8].energyStorage residualEnergyCapacity:last 99.82720057554404
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[8].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[8].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[8].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[8].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[8].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[8].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[8].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[8].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[8].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[8].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[8].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[9].energyStorage residualEnergyCapacity:last 99.82720057554569
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[9].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[9].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[9].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[9].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[9].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[9].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[9].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[9].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[9].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[9].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[9].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[10].energyStorage residualEnergyCapacity:last 99.82720057555173
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[10].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[10].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[10].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[10].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[10].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[10].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[10].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[10].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[10].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[10].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[10].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[11].energyStorage residualEnergyCapacity:last 99.8272005755467
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[11].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[11].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[11].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[11].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[11].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[11].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[11].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[11].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[11].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[11].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[11].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[12].energyStorage residualEnergyCapacity:last 99.8272005755501
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[12].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[12].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[12].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[12].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[12].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[12].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[12].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[12].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[12].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[12].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[12].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[13].energyStorage residualEnergyCapacity:last 99.82720057554806
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[13].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[13].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[13].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[13].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[13].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[13].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[13].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[13].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[13].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[13].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[13].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[14].energyStorage residualEnergyCapacity:last 99.82720057554744
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[14].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[14].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[14].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[14].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[14].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[14].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[14].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[14].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[14].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[14].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[14].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[15].energyStorage residualEnergyCapacity:last 99.8272005755508
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[15].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[15].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[15].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[15].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[15].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[15].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[15].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[15].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[15].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[15].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[15].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[16].energyStorage residualEnergyCapacity:last 99.82720057554738
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[16].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[16].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[16].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[16].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[16].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[16].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[16].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[16].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[16].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[16].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[16].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[17].energyStorage residualEnergyCapacity:last 99.82720057554715
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[17].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[17].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[17].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[17].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[17].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[17].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[17].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[17].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[17].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[17].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[17].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[18].energyStorage residualEnergyCapacity:last 99.8272005755464
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[18].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[18].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[18].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[18].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[18].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[18].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[18].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[18].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[18].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[18].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[18].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[19].energyStorage residualEnergyCapacity:last 99.82720057554539
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[19].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[19].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[19].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[19].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[19].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[19].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[19].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[19].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[19].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[19].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[19].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[20].energyStorage residualEnergyCapacity:last 99.82720057554877
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[20].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[20].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[20].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[20].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[20].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[20].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[20].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[20].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[20].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[20].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[20].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[21].energyStorage residualEnergyCapacity:last 99.82720057554621
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[21].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[21].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[21].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[21].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[21].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[21].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[21].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[21].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[21].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[21].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[21].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[22].energyStorage residualEnergyCapacity:last 99.82720057554698
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[22].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[22].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[22].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[22].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[22].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[22].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[22].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[22].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[22].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[22].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[22].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[23].energyStorage residualEnergyCapacity:last 99.82720057554396
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[23].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[23].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[23].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[23].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[23].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[23].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[23].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[23].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[23].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[23].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[23].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[24].energyStorage residualEnergyCapacity:last 99.82720057554721
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[24].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[24].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[24].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[24].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[24].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[24].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[24].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[24].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[24].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[24].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[24].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[25].energyStorage residualEnergyCapacity:last 99.82720057554607
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[25].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[25].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[25].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[25].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[25].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[25].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[25].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[25].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[25].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[25].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[25].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[26].energyStorage residualEnergyCapacity:last 99.82720057554815
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[26].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[26].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[26].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[26].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[26].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[26].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[26].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[26].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[26].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[26].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[26].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[27].energyStorage residualEnergyCapacity:last 99.82720057554808
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[27].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[27].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[27].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[27].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[27].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[27].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[27].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[27].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[27].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[27].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[27].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[28].energyStorage residualEnergyCapacity:last 99.82720057554695
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[28].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[28].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[28].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[28].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[28].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[28].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[28].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[28].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[28].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[28].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[28].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.sensor[29].energyStorage residualEnergyCapacity:last 99.82720057554471
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar WarehouseWSN.sensor[29].wlan[0].mac numRetry 0
+scalar WarehouseWSN.sensor[29].wlan[0].mac numSentWithoutRetry 88
+scalar WarehouseWSN.sensor[29].wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.sensor[29].wlan[0].mac numCollision 0
+scalar WarehouseWSN.sensor[29].wlan[0].mac numSent 88
+scalar WarehouseWSN.sensor[29].wlan[0].mac numReceived 0
+scalar WarehouseWSN.sensor[29].wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.sensor[29].wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.sensor[29].app[0] "packets sent" 88
+scalar WarehouseWSN.sensor[29].app[0] "packets received" 0
+scalar WarehouseWSN.sensor[29].app[0] packetSent:count 88
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar WarehouseWSN.gateway.wlan[0].mac numRetry 0
+scalar WarehouseWSN.gateway.wlan[0].mac numSentWithoutRetry 0
+scalar WarehouseWSN.gateway.wlan[0].mac numGivenUp 0
+scalar WarehouseWSN.gateway.wlan[0].mac numCollision 0
+scalar WarehouseWSN.gateway.wlan[0].mac numSent 0
+scalar WarehouseWSN.gateway.wlan[0].mac numReceived 2640
+scalar WarehouseWSN.gateway.wlan[0].mac numSentBroadcast 0
+scalar WarehouseWSN.gateway.wlan[0].mac numReceivedBroadcast 0
+scalar WarehouseWSN.gateway.app[0] packetReceived:count 2640
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar WarehouseWSN.gateway.app[0] packetReceived:sum(packetBytes) 168960
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic WarehouseWSN.gateway.app[0] endToEndDelay:stats
+field count 2640
+field mean 0.0014317174230151517
+field stddev 0.00022520534113190012
+field min 0.001098051025
+field max 0.002706225197
+field sum 3.77973399676
+field sqrsum 0.005545354356658558
+attr interpolationmode none
+attr recordingmode stats
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+

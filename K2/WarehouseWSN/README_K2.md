@@ -125,7 +125,7 @@ Script chạy đủ seed 0–4, tự thiết lập PATH trong tiến trình hi�
 
 Đường dẫn: `D:\Apps\omnet++\omnetpp-6.4.0-windows-x86_64\omnetpp-6.4.0\samples\WarehouseWSN`.
 
-`simulations/omnetpp.ini` đã được cập nhật để K2 kế thừa K1. File NED, cách hiển thị, metadata IDE và executable hiện có được giữ nguyên. Cấu hình nguồn trước khi cập nhật nằm trong `backups/before_K2_20261029`. Hai hàng Y=8 và 52 m và tên config `K2_Base` từ bản nháp được giữ lại; `K2_Base` hiện là alias của `K2_Final` để tránh hỏng lựa chọn config cũ. Trong project tích hợp, không cần import lại project có cùng tên; bấm Refresh trong IDE và chọn `K2_Final`.
+`simulations/omnetpp.ini` đã được cập nhật để K2 kế thừa K1. File NED, cách hiển thị, metadata IDE và executable hiện có được giữ nguyên. Các bản sao cũ đã được dọn khỏi project ngày 31/10/2026 và lưu trong ZIP khôi phục ngoài project. Xem analysis/COMPACT_RESULTS.md. Hai hàng Y=8 và 52 m và tên config `K2_Base` từ bản nháp được giữ lại; `K2_Base` hiện là alias của `K2_Final` để tránh hỏng lựa chọn config cũ. Trong project tích hợp, không cần import lại project có cùng tên; bấm Refresh trong IDE và chọn `K2_Final`.
 
 Để quan sát bằng Qtenv:
 
