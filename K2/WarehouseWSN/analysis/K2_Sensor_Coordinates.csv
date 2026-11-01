@@ -1,0 +1,32 @@
+﻿node,x_m,y_m,z_m,origin
+sensor[0],20,15,0,K1 retained
+sensor[1],35,15,0,K1 retained
+sensor[2],50,15,0,K1 retained
+sensor[3],65,15,0,K1 retained
+sensor[4],80,15,0,K1 retained
+sensor[5],20,45,0,K1 retained
+sensor[6],35,45,0,K1 retained
+sensor[7],50,45,0,K1 retained
+sensor[8],65,45,0,K1 retained
+sensor[9],80,45,0,K1 retained
+sensor[10],20,5,0,K2 added
+sensor[11],35,5,0,K2 added
+sensor[12],50,5,0,K2 added
+sensor[13],65,5,0,K2 added
+sensor[14],80,5,0,K2 added
+sensor[15],20,25,0,K2 added
+sensor[16],35,25,0,K2 added
+sensor[17],50,25,0,K2 added
+sensor[18],65,25,0,K2 added
+sensor[19],80,25,0,K2 added
+sensor[20],20,35,0,K2 added
+sensor[21],35,35,0,K2 added
+sensor[22],50,35,0,K2 added
+sensor[23],65,35,0,K2 added
+sensor[24],80,35,0,K2 added
+sensor[25],20,55,0,K2 added
+sensor[26],35,55,0,K2 added
+sensor[27],50,55,0,K2 added
+sensor[28],65,55,0,K2 added
+sensor[29],80,55,0,K2 added
+gateway,5,5,0,same as K1
