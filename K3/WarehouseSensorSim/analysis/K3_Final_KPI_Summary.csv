@@ -1,5 +1,0 @@
-﻿metric,runs_with_data,mean,sample_stddev
-PDR_percent,5,100.0,0.0
-delay_mean_ms,5,1.350496906891894,0.03740649538086098
-energy_remaining_J_per_sensor,5,99.8527532699505,1.9712804296261126e-07
-energy_consumed_J_per_sensor,5,0.14724673004949693,1.9712804296261126e-07
